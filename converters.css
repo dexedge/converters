@@ -18,7 +18,7 @@ h1, h3, label {
     font-family: serif;
 }
 
-/* Eliminate red blow that Firefox places around input fields */
+/* Eliminate red "glow" that Firefox places around input fields */
 input:-moz-ui-invalid {
     box-shadow: none;
 }
