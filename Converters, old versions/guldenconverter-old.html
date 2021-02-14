@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gulden Calculator</title>
+    <link rel="stylesheet" href="guldenconverter.css">
+    <script>
+        function guldenToKreuzer(gulden, kreuzer, resultElementByName) {
+            gulden = Number(gulden);
+            kreuzer = Number(kreuzer);
+
+            var totalKreuzer = gulden * 60 + kreuzer;
+
+            var resultElement = document.getElementById(resultElementByName);
+
+            resultElement.innerHTML = totalKreuzer + " kr"
+        }
+
+        function kreuzerToGulden(kreuzer, resultElementByName1, resultElementByName2) {
+            kreuzer = Number(kreuzer);
+
+            var gulden = Math.floor(kreuzer/60);
+            var kreuzer = kreuzer % 60
+
+            var resultElement1 = document.getElementById(resultElementByName1);
+            var resultElement2 = document.getElementById(resultElementByName2);
+
+            resultElement1.innerHTML = gulden + " fl";
+            resultElement2.innerHTML = kreuzer + " kr";
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+    <h1>Gulden Converter®</h1>
+
+        <fieldset>
+            <legend>Convert gulden and kreuzer to total kreuzer</legend>
+            <input type="text" name="gulden" size=5> fl
+            <input type="text" name="kreuzer" size=2> kr
+            <p>
+                <input type="button" name="calc" value="Calculate"
+                onclick="guldenToKreuzer(this.form.gulden.value, this.form.kreuzer.value, 'result1')">
+            </p>
+            Total kreuzer: <span id="result1"></span>
+        </fieldset>
+    </form>
+    <form action="">
+        <fieldset>
+            <legend>Convert total kreuzer to gulden and kreuzer</legend>
+            <input type="text" name="kreuzer" size=10> kr <br>
+            <p>
+                <input type="button" name="calc" value="Calculate" onclick="kreuzerToGulden(this.form.kreuzer.value,'result2',
+                'result3')">
+            </p>
+            <span id="result2"></span> <span id="result3"></span>
+        </fieldset>
+    </form>
+</body>
+</html>

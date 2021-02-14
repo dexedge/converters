@@ -1,0 +1,35 @@
+/*
+Austrian Converters (Bootstrap), CSS
+Version 0.2
+Dexter Edge
+Version 0.1: 2018-09-05
+Revised: 2021-02-11
+*/
+
+body {
+    font-size: 18px;
+    background-color: #fafaf3;
+}
+
+h1 {
+    padding-top: 10px;
+}
+
+h1, h3, label {
+    font-family: serif;
+}
+
+/* Eliminate red blow that Firefox places around input fields */
+input:-moz-ui-invalid {
+    box-shadow: none;
+}
+
+#instructions {
+    font-size: 0.8em;
+    color: #888;
+}
+
+#b {
+    margin-top: 1em;
+}
+
