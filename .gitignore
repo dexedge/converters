@@ -2,4 +2,4 @@
 *.JPG
 *.jpeg
 *.png
-Converters/, old versions
+**/
