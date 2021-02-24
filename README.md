@@ -1,6 +1,6 @@
 # Austrian converters
 
-A Javascript-based web converter for historical Austrian units. Currently includes:
+A Javascript-based web calculator for historical Austrian units. Currently includes:
 
 * length
   * österreichische Postmeile, kilometers, miles
