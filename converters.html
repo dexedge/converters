@@ -1,7 +1,6 @@
-<!-- Austrian Converters (new version, 2021) -->
+<!-- Austrian Converters (2021) -->
 <!-- Dexter Edge -->
-<!-- Version 0.1 -->
-<!-- 2021-02-13 -->
+<!-- 2021-02-24 -->
 
 <!-- Lengths -->
 
@@ -22,86 +21,146 @@
     
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Length</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="converters-temperture.html">Temperature</a>
-                </li>
-            </div>
-          </div>    
+            <div class="container-fluid">
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Length</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="converters-temperture.html">Temperature</a>
+                    </li>
+                </div>
+            </div>    
         </nav>
         <h1>Austrian Converters</h1>
         <h3>Dexter Edge</h3>
         <hr>
         <h3>Length</h3>
-        <div class="row">
-            <div class="col-4">
+        <!-- Row 1: Meile; Wiener Klafter, Fuß, Zoll -->
+        <div class="row"> 
+            <div class="col-3">
                 <p>
-                    <label>Klafter: </label>
-                    <input id="klafter" class="form-control" type="number" placeholder="Klafter"
-                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)"
-                    onclick="this.select()">
+                    <label>österreichische Postmeile</label>
+                    <input id="meile" class="form-control" type="number" placeholder="Meile"
+                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)" onclick="this.select()" ondblclick="clearForm()">
                 </p>
             </div>
-            <div class="col-4">
+            <div class="col-3">
                 <p>
-                    <label>Fuß: </label>
-                    <input id="fuss" class="form-control" type="number" placeholder="Fuß"
-                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)"
-                    onclick="this.select()">
+                    <label>Wiener Klafter: </label>
+                    <input id="wienerklafter" class="form-control" type="number" placeholder="Wiener Klafter"
+                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)" onclick="this.select()" ondblclick="clearForm()">
                 </p>
+            </div>
+            <div class="col-3">
+                <p>
+                    <label>Wiener Fuß (Schuh): </label>
+                    <input id="wienerfuss" class="form-control" type="number" placeholder="Wiener Fuß"
+                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)" onclick="this.select()" ondblclick="clearForm()">
+                </p>
+            </div>
+            <div class="col-3">
+                <p>
+                    <label>Wiener Zoll: </label>
+                    <input id="wienerzoll" class="form-control" type="number" placeholder="Wiener Zoll"
+                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)" onclick="this.select()" ondblclick="clearForm()">
+                </p>
+            </div>
+        </div>
+        <!-- End Row 1 -->
+        <!-- Row 2: Salzburger Klafter, Fuß, Zoll -->
+        <div class = row>
+            <div class="col-3"></div>
+            <div class="col-3">
+                <p>
+                    <label>Salzburger Klafter: </label>
+                    <input id="salzburgerklafter" class="form-control" type="number" placeholder="Salzburger Klafter"
+                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)" onclick="this.select()" ondblclick="clearForm()">
+                </p>
+            </div>
+            <div class="col-3">
+                <p>
+                    <label>Salzburger Fuß (Schuh): </label>
+                    <input id="salzburgerfuss" class="form-control" type="number" placeholder="Salzburger Fuß"
+                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)" onclick="this.select()" ondblclick="clearForm()">
+                </p>
+            </div>
+            <div class="col-3">
+                <p>
+                    <label>Salzburger Zoll: </label>
+                    <input id="salzburgerzoll" class="form-control" type="number" placeholder="Salzburger Zoll"
+                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)" onclick="this.select()" ondblclick="clearForm()">
+                </p>
+            </div>
+        </div>
+        <!-- End Row 2 -->
+        <!-- Row 3: Kilometers, meters, centimeters -->
+        <div class = row>
+            <div class="col-3">
+                <p>
+                    <label>Kilometers</label>
+                    <input id="kilometers" class="form-control" type="number" placeholder="Kilometers"
+                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)" onclick="this.select()" ondblclick="clearForm()">
+                </p>
+            </div>
+            <div class="col-3"> </div>
+            <div class="col-3">
                 <p>
                     <label>Meters: </label>
                     <input id="meters" class="form-control" type="number" placeholder="Meters"
-                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)"
-                    onclick="this.select()">
-                </p>
-                <p>
-                    <label>Feet: </label>
-                    <input id="feet" class="form-control" type="number" placeholder="Feet"
-                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)"
-                    onclick="this.select()">
+                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)" onclick="this.select()" ondblclick="clearForm()">
                 </p>
             </div>
-            <div class="col-4">
-                <p>
-                    <label>Zoll: </label>
-                    <input id="zoll" class="form-control" type="number" placeholder="Zoll"
-                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)"
-                    onclick="this.select()">
-                </p>
+            <div class="col-3">
                 <p>
                     <label>Centimeters: </label>
                     <input id="cm" class="form-control" type="number" placeholder="Centimeters"
-                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)"
-                    onclick="this.select()">
-                </p>
-                <p>
-                    <label>Inches: </label>
-                    <input id="inches" class="form-control" type="number" placeholder="Inches"
-                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)"
-                    onclick="this.select()">
+                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)" onclick="this.select()" ondblclick="clearForm()">
                 </p>
             </div>
         </div>
+        <!-- End Row 3 -->
+        <!-- Row 4: Miles, feet, inches -->
+        <div class = row>
+            <div class="col-3">
+                <p>
+                    <label>Miles</label>
+                    <input id="miles" class="form-control" type="number" placeholder="Miles"
+                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)" onclick="this.select()" ondblclick="clearForm()">
+                </p>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3">
+                <p>
+                    <label>Feet: </label>
+                    <input id="feet" class="form-control" type="number" placeholder="Feet"
+                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)" onclick="this.select()" ondblclick="clearForm()">
+                </p>
+            </div>
+            <div class="col-3">
+                <p>
+                    <label>Inches: </label>
+                    <input id="inches" class="form-control" type="number" placeholder="Inches"
+                    oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)" onclick="this.select()" ondblclick="clearForm()">
+                </p>
+            </div>
+        </div>
+        <!-- End Row 4 -->
+        <!-- Instructions and Sources -->
         <p><a id='b' class="btn btn-outline-secondary btn-sm" href="#" role="button">Clear</a></p>
         <hr>
         <div id="instructions">
-            <p>Enter a value into the appropriate box, and the values for the other boxes will update automatically.</p>
-            <p>One Klafter = 1.89648384 meters. See <a href="https://de.wikipedia.org/wiki/Alte_Ma%C3%9Fe_und_Gewichte_(%C3%96sterreich)" target="_blank">Alte Maße und Gewichte (Österreich)</a>  (de.wikipedia). Conversions are rounded to four decimal places.</p>
-            <a href="https://github.com/dexedge/converters" target="_blank"><img id="github" src="GitHub-Mark-32px.png" alt="GitHub repository link" style="float:right"></a>
+            <p>Enter a value into any box, and values for all other boxes will update automatically. To clear the form, double click in any box or press "Clear."</p>
+            <p>One Wiener Klafter = 1.89648384 meters. See <a href="https://de.wikipedia.org/wiki/Alte_Ma%C3%9Fe_und_Gewichte_(%C3%96sterreich)" target="_blank">Alte Maße und Gewichte (Österreich)</a>  (de.wikipedia). <br>Salzburg lengths are in a relation to Viennese lengths of 17:16. See <a href="https://www.sn.at/wiki/Alte_Ma%C3%9Fe_und_Gewichte_im_F%C3%BCrsterzbistum_Salzburg">Alte Maße und Gewichte im Fürsterzbistum Salzburg</a> (Salzburg Wiki).<br> Conversions are given to six signifcant digits. <a href="https://github.com/dexedge/converters" target="_blank"><img id="github" src="GitHub-Mark-32px.png" alt="GitHub repository link" style="float:right"></a></p>
+            
         </div>
     </div>
-
-    
+ 
     <!-- Bootstrap 5.0.0 beta, JS bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 

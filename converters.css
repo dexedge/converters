@@ -1,11 +1,12 @@
 /*
 Austrian Converters (2021), CSS
-Version 0.1
+Version 0.2
 Dexter Edge
-2021-02-14
+2021-02-24
 */
 
 body {
+    font-family: serif;
     font-size: 18px;
     background-color: #fafaf3;
 }
@@ -14,8 +15,8 @@ h1 {
     padding-top: 10px;
 }
 
-h1, h3, label {
-    font-family: serif;
+input {
+    font-family: sans-serif;
 }
 
 /* Eliminate red "glow" that Firefox places around input fields */
