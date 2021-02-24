@@ -13,3 +13,7 @@ A Javascript-based web converter for historical Austrian units. Currently includ
   * Réaumur
   * Celsius
   * Fahrenheit
+
+The online calculator is here:
+
+[http://dexteredge.org/converters.html](http://dexteredge.org/converters.html)
