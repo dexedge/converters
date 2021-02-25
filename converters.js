@@ -81,7 +81,7 @@ function lengthConverter(source, inputValue) {
         inches.value = (inputValue * klafterToMeters * metersToFeet * 12).toPrecision(6);
     }
     if (source == "wienerfuss") {
-        meile.value = (inputValue/4000/6).toPrecision(6);
+        meile.value = (inputValue/6/4000).toPrecision(6);
         wienerklafter.value = (inputValue/6).toPrecision(6);
         wienerzoll.value = (inputValue * 12).toPrecision(6);
         salzburgerklafter.value = (inputValue/6 * 16/17).toPrecision(6);
@@ -95,7 +95,7 @@ function lengthConverter(source, inputValue) {
         inches.value = (inputValue/6 * klafterToMeters * metersToFeet * 12).toPrecision(6);
     }
     if (source == "wienerzoll") {
-        meile.value = (inputValue/4000/72).toPrecision(6);
+        meile.value = (inputValue/72/4000).toPrecision(6);
         wienerklafter.value = (inputValue/72).toPrecision(6);
         wienerfuss.value = (inputValue/12).toPrecision(6);
         salzburgerklafter.value = (inputValue/72 * 16/17 ).toPrecision(6);
@@ -126,7 +126,7 @@ function lengthConverter(source, inputValue) {
             (inputValue * klafterToMeters * metersToFeet * 12 * 17/16).toPrecision(6);
         }
     if (source == "salzburgerfuss") {
-        meile.value = (inputValue/4000/6 * 17/16).toPrecision(6);
+        meile.value = (inputValue/6/4000 * 17/16).toPrecision(6);
         wienerklafter.value = (inputValue/6 * 17/16).toPrecision(6);
         wienerfuss.value = (inputValue * 17/16).toPrecision(6);
         wienerzoll.value = (inputValue * 12 * 17/16).toPrecision(6);
@@ -144,7 +144,7 @@ function lengthConverter(source, inputValue) {
             (inputValue/6 * klafterToMeters * metersToFeet * 12 * 17/16).toPrecision(6);
     }
     if (source == "salzburgerzoll") {
-        meile.value = (inputValue/4000/72 * 17/16).toPrecision(6);
+        meile.value = (inputValue/72/4000 * 17/16).toPrecision(6);
         wienerklafter.value = (inputValue/72 * 17/16).toPrecision(6);
         wienerfuss.value = (inputValue/12 * 17/16).toPrecision(6);
         wienerzoll.value = (inputValue * 17/16).toPrecision(6);
