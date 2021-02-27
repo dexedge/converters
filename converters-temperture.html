@@ -48,19 +48,19 @@
                     <label>&deg;Réaumur: </label>
                     <input id="reaumur" class="form-control" type="number" placeholder="&deg;Réaumur"
                     oninput="temperatureConverter(this.id, this.value)" onchange="temperatureConverter(this.id, this.value)"
-                    onclick="this.select()">
+                    onclick="this.select()" ondblclick="clearForm()">
                 </p>
                 <p>
                     <label>&deg;Celsius: </label>
                     <input id="celsius" class="form-control" type="number" placeholder="&deg;Celsius"
                     oninput="temperatureConverter(this.id, this.value)" onchange="temperatureConverter(this.id, this.value)"
-                    onclick="this.select()">
+                    onclick="this.select()" ondblclick="clearForm()">
                 </p>
                 <p>
                     <label>&deg;Fahrenheit: </label>
                     <input id="fahrenheit" class="form-control" type="number" placeholder="&deg;Fahrenheit"
                     oninput="temperatureConverter(this.id, this.value)" onchange="temperatureConverter(this.id, this.value)"
-                    onclick="this.select()">
+                    onclick="this.select()" ondblclick="clearForm()">
                 </p>
             </div>
         </div>
