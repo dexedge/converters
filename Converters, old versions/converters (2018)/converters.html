@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+Austrian converters (Bootstrap)
+Version 0.2
+Dexter Edge
+Version 0.1: 2018-09-05
+Revised: 2021-02-11
+
+Approach based on the underlying HTML and JavaScript (not the 'Try It' code) at the page https://www.w3schools.com/howto/howto_js_weight_converter.asp
+
+The page uses Bootstrap 4.1.3
+-->
+<html lang="en">
+<head>
+  <title>Austrian Converters</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"href= "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <script src= "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+  </script>
+  <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+  </script>
+
+  <script src="converters.js"></script>
+  <link rel="stylesheet" href="converters.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Austrian Converters</h1>
+  <p id="author">Dexter Edge</p>
+  <div class="row">
+      <div class="col">
+          <h3>Temperature</h3>
+          <p>
+              <label>&deg;Réaumur: </label>
+              <input id="reaumur" class="form-control" type="number" placeholder="&deg;Réaumur"
+              oninput="temperatureConverter(this.id, this.value)" onchange="temperatureConverter(this.id, this.value)"
+              onclick="this.select()">
+          </p>
+          <p>
+              <label>&deg;Celsius: </label>
+              <input id="celsius" class="form-control" type="number" placeholder="&deg;Celsius"
+              oninput="temperatureConverter(this.id, this.value)" onchange="temperatureConverter(this.id, this.value)"
+              onclick="this.select()">
+          </p>
+          <p>
+              <label>&deg;Fahrenheit: </label>
+              <input id="fahrenheit" class="form-control" type="number" placeholder="&deg;Fahrenheit"
+              oninput="temperatureConverter(this.id, this.value)" onchange="temperatureConverter(this.id, this.value)"
+              onclick="this.select()">
+          </p>
+      </div>
+      <div class="col">
+          <h3>Length</h3>
+          <p>
+              <label>Klafter: </label>
+              <input id="klafter" class="form-control" type="number" placeholder="Klafter"
+              oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)"
+              onclick="this.select()">
+          </p>
+          <p>
+              <label>Meters: </label>
+              <input id="meters" class="form-control" type="number" placeholder="Meters"
+              oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)"
+              onclick="this.select()">
+          </p>
+          <p>
+              <label>Feet: </label>
+              <input id="feet" class="form-control" type="number" placeholder="Feet"
+              oninput="lengthConverter(this.id, this.value)" onchange="lengthConverter(this.id, this.value)"
+              onclick="this.select()">
+          </p>
+      </div>
+      <p id="instructions">
+          Enter the value in any of the three measurement systems into the appropriate box, and the converted values in the other two systems will update automatically.
+      </p>
+  </div>
+</div>
+
+</body>
+</html>

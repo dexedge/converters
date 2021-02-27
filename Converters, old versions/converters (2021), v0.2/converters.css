@@ -1,0 +1,38 @@
+/*
+Austrian Converters (2021), CSS
+Version 0.1
+Dexter Edge
+2021-02-14
+*/
+
+body {
+    font-size: 18px;
+    background-color: #fafaf3;
+}
+
+h1 {
+    padding-top: 10px;
+}
+
+h1, h3, label {
+    font-family: serif;
+}
+
+/* Eliminate red "glow" that Firefox places around input fields */
+input:-moz-ui-invalid {
+    box-shadow: none;
+}
+
+#instructions {
+    font-size: 0.8em;
+    color: #888;
+}
+
+#b {
+    margin-top: 1em;
+}
+
+#github {
+    opacity: 0.5;
+}
+
